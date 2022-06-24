@@ -10,11 +10,12 @@ int[] newArray = new int[NewSize];
 for (int i=0; i<NewSize; i++)
 {
     array[i] = new Random().Next(Convert.ToInt32(SetArr[1]),Convert.ToInt32(SetArr[2]));
-    newArray[i] = array[i]; 
     Console.Write($"{array[i]} ");
 }
 Console.WriteLine("");
 
 Console.WriteLine("Новый массив: ");
-foreach (int k in newArray)
-    Console.Write($"{k} ");
+for (int i=0; i<NewSize; i++){
+    newArray[i] = array[i]; 
+    Console.Write($"{newArray[i]} ");
+}

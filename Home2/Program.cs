@@ -5,11 +5,11 @@ void f(double x, double y, double k){
 }
 
 
-Console.WriteLine("Введите x");
-double x = Convert.ToDouble(Console.ReadLine()?? "");
-Console.WriteLine("Введите y");
-double y = Convert.ToDouble(Console.ReadLine()?? "");
+Console.WriteLine("введите координаты списком");
+string input = Console.ReadLine() ?? "";
 Console.WriteLine("Введите коэфицент k");
 double k = Convert.ToDouble(Console.ReadLine()?? "");
-f(x,y,k);
-
+string[] array = input.Split(" ");
+for (int i = 0; i < 7; i +=2){
+    f(Convert.ToDouble(array[i]), Convert.ToDouble(array[i+1]), k);  
+}
